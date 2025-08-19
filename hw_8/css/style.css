@@ -1,0 +1,74 @@
+@import url('./vars.css');
+@import url('./#normalaize.css');
+
+html,body{
+    font-family:Verdana, Geneva, Tahoma,sans-serif;
+    font-size: var(--main-front-size);
+    background: linear-gradient(60deg #504df5,#a4e7df )
+    min-height 100vh;
+
+}
+.container{
+    max-width: 1140;
+    margin: 0 auto;
+
+}
+ul,ol{
+    margin: 0 0;
+    padding: 15px 0;
+    list-style: none;
+
+}
+.heder{
+    padding: 15px 0;
+    background: #546ccb;
+
+}
+.umblist__n{
+    padding-left: 40px;
+
+}
+
+.list__numb li :hover {
+
+
+}
+/*------------Комбіенатори. ' ', >, ~, + ---------
+ 
+/* ' ' ~ всі нащядки */
+.list__numb span {
+    margin-right: 8px;
+    font-style: italic;
+}
+
+/* > - тільки дочірні елементи */
+.section > p{
+    font-weight: 500;
+}
+
+/* ~ - всі сусудні елементи */
+
+.title_2 ~ p {
+    border: 1px solid #09a1e8;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.title_2 + * {
+    background: #ffddff;
+}
+
+
+
+.menu li:nth-child(3) {
+
+}
+
+.section p:nth-child(2){
+    background: #ff0d00;
+
+}
+
+section p:nth-of-type{
+    background: #2618e3;
+}
