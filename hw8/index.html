@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CSS Dinner Shopping List</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+
+  <div class="board">
+    <header>
+      <h1>CSS Dinner Shopping List</h1>
+      <p>Let’s go to the mall!</p>
+    </header>
+
+    <div class="list" id="list">
+      <div class="item">
+        <input type="checkbox" />
+        <div class="row">
+          <div class="box"><span class="tick"></span></div>
+          <div class="text">
+            <strong>A lot of pickles</strong>
+            <small>(for the next lessons about CSS)</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <input type="checkbox" checked />
+        <div class="row">
+          <div class="box"><span class="tick"></span></div>
+          <div class="text">
+            <strong>10 apples</strong>
+            <small>(for more CSS manipulations)</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <input type="checkbox" />
+        <div class="row">
+          <div class="box"><span class="tick"></span></div>
+          <div class="text">
+            <strong>20 oranges</strong>
+            <small>(because they are awesome)</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <input type="checkbox" />
+        <div class="row">
+          <div class="box"><span class="tick"></span></div>
+          <div class="text">
+            <strong>13 plates</strong>
+            <small>(hmm… they always disappear)</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <input type="checkbox" />
+        <div class="row">
+          <div class="box"><span class="tick"></span></div>
+          <div class="text">
+            <strong>15 bentos</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <input type="checkbox" checked />
+        <div class="row">
+          <div class="box"><span class="tick"></span></div>
+          <div class="text">
+            <strong>1 bottle of Sake</strong>
+            <small>(for my friends)</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="badges">
+        <label class="toggle">
+          <input type="checkbox" />
+          <span class="knob"></span>
+        </label>
+        <span class="pill"><small id="done-count">0</small></span>
+      </div>
+    </div>
+
+    <footer>
+      <button class="cta">Bon appetit :</button>
+    </footer>
+  </div>
+
+<script>
+  const list = document.getElementById('list');
+  const counter = document.getElementById('done-count');
+
+  function updateCount(){
+    const checks = list.querySelectorAll('.item input');
+    const done = [...checks].filter(c => c.checked).length;
+    counter.textContent = done;
+  }
+  list.addEventListener('change', updateCount);
+  updateCount();
+</script>
+</body>
+</html>
