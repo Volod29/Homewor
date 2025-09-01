@@ -1,0 +1,33 @@
+@import url(normalize.css);
+@import url(vars.css);
+
+
+body {
+    background-color: #e0f7fa; /* Світло-блакитний фон */
+}
+
+.main {
+    padding: 40px 20px; /* Додаємо відступи до основного розділу */
+    text-align: center; /* Центруємо текст */
+    min-height: 100vh; /* Задаємо мінімальну висоту для центрування */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Вирівнюємо вміст по верхньому краю */
+}
+
+.title {
+    color: #004d40; /* Темний колір тексту для заголовка */
+    margin-bottom: 30px; /* Відстань під заголовком */
+}
+
+.weather-box {
+    color: white; /* Білий колір тексту для прогнозу погоди */
+    border-radius: 10px; /* Закруглені кути для блоків */
+    padding: 20px; /* Відступи всередині блоків */
+    text-align: center; /* Центруємо текст */
+    margin: 10px; /* Відстань між блоками */
+}
+
+footer {
+    margin-top: 40px; /* Збільшено відстань над футером */
+}
